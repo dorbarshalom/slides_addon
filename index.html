@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Presentors</title>
+  <meta name="description" content="An amazing Google Slides add-on">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="panel">
+      <div id="panel-box">
+        <div id="presenters" class="section">
+          <h2>Choose your presenter</h2>
+          <ul>
+            <li>
+              <img src="img/p1.png">
+            </li>
+            <li>
+              <img src="img/p2.png">
+            </li>
+            <li>
+              <img src="img/p3.png">
+            </li>
+            <li>
+              <img src="img/p4.png">
+            </li>
+            <li>
+              <img src="img/p5.png">
+            </li>
+            <li>
+              <img src="img/p-custom.png">
+            </li>
+          </ul>
+        </div>
+        <div id="text" class="section">
+          <h2>What should they say?</h2>
+          <textarea></textarea>
+          <button class="grey">Listen</button>
+        </div>
+        <div id="voice" class="section">
+          <h2>Voice</h2>
+          <ul>
+            <li>
+              <div class="label">Voice style</div>
+              <div class="ui">
+                <select name="style">
+                  <option value="casual">Casual</option>
+                  <option value="formal">Formal</option>
+                  <option value="fun">Fun</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="label">Language</div>
+              <div class="ui">
+                <select name="language">
+                  <option value="en">English US</option>
+                  <option value="fr">French</option>
+                  <option value="de">German</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+          
+
+        </div>
+        <div id="visual" class="section">
+          <h2>Visual</h2>
+          <ul>
+            <li>
+              <div class="label">Size</div>
+              <div class="ui" id="size">
+                <button class="grey" value="sm">Small</button>
+                <button class="grey" value="md">Medium</button>
+                <button class="grey" value="lr">Large</button>
+              </div>
+            </li>
+            <li>
+              <div class="label">Position</div>
+              <div class="ui">
+                <select name="Position" id="position">
+                  <option value="bottom-left">Bottom left</option>
+                  <option value="bottom-right">Bottom right</option>
+                  <option value="top-left">Top left</option>
+                  <option value="top-right">Top right</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="label">Shape</div>
+              <div class="ui">
+                <select name="shape">
+                  <option value="">Circle</option>
+                  <option value="">Square</option>
+                  <option value="">Rounded</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="label">Background</div>
+              <div class="ui">
+                <ul id="bg">
+                  <li class="c1" color="#FF595E"></li>
+                  <li class="c2" color="#FFCA3A"></li>
+                  <li class="c3" color="#8AC926"></li>
+                  <li class="c4" color="#1982C4"></li>
+                  <li class="c5" color="#6A4C93"></li>
+                  <li class="c6" color="#F2F2F2"></li>
+                  <li class="c-custom">></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="label">Caption</div>
+              <div class="ui">
+                <img src="img/switch.png">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="spacer"></div>
+      </div>
+    </div>
+
+    <div id="slide">
+      <div id="slide-box">
+        <div id="presenter" class="md">
+          <img src="img/p1.png" class="md">
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+        <button class="blue">Generate</button>
+      </div>
+  </div>
+
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
