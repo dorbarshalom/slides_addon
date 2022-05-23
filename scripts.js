@@ -1,9 +1,11 @@
 var slideWidth = 1045;
 var slideHeight = 587; 
 
-var currentPosition = "top-left";
-
 var slidePadding = 30; 
+
+xPos = 0 + slidePadding;
+yPos = 0 + slidePadding;
+
 
 $(document).ready(function(){
     $("#presenters img").click(function(e){
@@ -14,40 +16,58 @@ $(document).ready(function(){
 
     $("#position").change(function () {
 
-        var presenterW = $("#presenter img").innerWidth();
+        positionPresenter();
+    });
+
+    function positionPresenter(){
+
+      var presenterW = $("#presenter img").innerWidth();
         var presenterH = $("#presenter img").height();
     
         var moveTo = $("#position").val(); 
 
-        currentPosition = moveTo;
-
         if (moveTo == "top-left"){
-          positionPresenter(0 + slidePadding, 0 + slidePadding);
+          xPos = 0 + slidePadding; 
+          yPos = 0 + slidePadding;
         }
         else if (moveTo == "top-right"){
-          positionPresenter(0 + slidePadding, slideWidth - presenterW - slidePadding);
+          xPos = 0 + slidePadding;
+          yPos = slideWidth - presenterW - slidePadding;
         }
         else if (moveTo == "bottom-left") {
-          positionPresenter(slideHeight - presenterH - slidePadding ,0 + slidePadding);
+          xPos = slideHeight - presenterH - slidePadding;
+          yPos = 0 + slidePadding;
         }
         else if (moveTo == "bottom-right"){
-          positionPresenter(slideHeight - presenterH - slidePadding, slideWidth - presenterW - slidePadding);
+          xPos = slideHeight - presenterH - slidePadding;
+          yPos = slideWidth - presenterW - slidePadding;
         }
-    });
 
-    // let's see if this comment goes away
-
-    function positionPresenter(x,y){
-      $("#presenter").css({top: x, left: y});
+      $("#presenter").css({top: xPos, left: yPos});
     };
 
     $("#size button").click(function () {
-        $("#presenter img").removeClass();
-        $("#presenter").removeClass();
-        $("#presenter img").addClass($(this).attr("value"));
-        $("#presenter").addClass($(this).attr("value"));
-
-        // console.log($(this).attr("value"));
+        
+        if($(this).attr("value") == "sm"){
+          $("#presenter img").css("width", "80px");
+          $("#presenter img").css("height", "80px");
+          $("#presenter").css("width", "80px");
+          $("#presenter").css("height", "80px");
+        }
+        else if($(this).attr("value") == "md"){
+          $("#presenter img").css("width", "160px");
+          $("#presenter img").css("height", "160px");
+          $("#presenter").css("width", "160px");
+          $("#presenter").css("height", "160px");
+        }
+        else if($(this).attr("value") == "lr"){
+          $("#presenter img").css("width", "240px");
+          $("#presenter img").css("height", "240px");
+          $("#presenter").css("width", "240px");
+          $("#presenter").css("height", "240px");
+        }
+        setTimeout(positionPresenter,300);
+        
     });    
 
     positionPresenter(slidePadding, slidePadding);
@@ -56,5 +76,11 @@ $(document).ready(function(){
     $("#bg li").click(function () {
        $("#presenter").css("background-color", $(this).attr("color"));
     });
+
+    $("#slides-panel li").click(function () {
+      //console.log("img/slides/" + $(this).attr("value") + ".png");
+      $("#slide-box").css("background-image", "url(img/slides/" + $(this).attr("value") + ".png)");
+    });  
+
 
 });

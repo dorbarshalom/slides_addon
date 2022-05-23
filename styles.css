@@ -6,8 +6,8 @@ body{
 
 #wrapper{
 	background-image: url("img/background.png");
-	width: 1678px;
-	height: 827px;
+	width: 1680px;
+	height: 829px;
 	position: absolute;
 	margin: 0 auto;
 	overflow: scroll;
@@ -36,6 +36,27 @@ body{
 
 #slide-box{
 	position: relative;
+	width: 1046px;
+	height: 589px;
+	background-image: url("img/slides/s1.png");
+	background-repeat: none;
+}
+
+#slides-panel{
+	position: fixed;
+	top: 125px;
+	left: 31px;
+}
+
+#slides-panel img{
+	width: 156px;
+	border-radius: 4px;
+	margin: 10px;
+	border: 1px solid #DADCDF;
+}
+
+#slides-panel li{
+	clear: both;
 }
 
 .section{
@@ -228,6 +249,7 @@ select{
 	position: absolute;
 	max-width: 240px;
 	border-radius: 50%;
+	transition: all 0.3s ease;
 }
 
 .sm{
