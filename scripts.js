@@ -35,6 +35,7 @@ $(document).ready(function(){
         }
     });
 
+    // let's see if this comment goes away
 
     function positionPresenter(x,y){
       $("#presenter").css({top: x, left: y});
