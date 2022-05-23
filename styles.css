@@ -144,6 +144,9 @@ li{
 
 #presenters ul li{
 	margin: 3px;
+	border-radius: 50%;
+	background-color: #f2f2f2;
+	overflow: hidden;
 }
 
 #voice li, #visual li{
@@ -199,7 +202,7 @@ select{
 }
 
 #bg .c2{
-	background-color: #FFCA3A;
+	background-color: #F7C84E;
 }
 
 #bg .c3{
@@ -207,7 +210,7 @@ select{
 }
 
 #bg .c4{
-	background-color: #1982C4;
+	background-color: #4979D1;
 }
 
 #bg .c5{
@@ -243,6 +246,7 @@ select{
 	transition: all 0.3s ease;
 	border-radius: 50%;
 	background-color: #f2f2f2;
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.30);
 }
 
 #presenter img{

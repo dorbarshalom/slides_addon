@@ -6,6 +6,9 @@ var slidePadding = 30;
 xPos = 0 + slidePadding;
 yPos = 0 + slidePadding;
 
+var sm = "80px";
+var md = "160px";
+var lr = "240px";
 
 $(document).ready(function(){
     $("#presenters img").click(function(e){
@@ -49,22 +52,22 @@ $(document).ready(function(){
     $("#size button").click(function () {
         
         if($(this).attr("value") == "sm"){
-          $("#presenter img").css("width", "80px");
-          $("#presenter img").css("height", "80px");
-          $("#presenter").css("width", "80px");
-          $("#presenter").css("height", "80px");
+          $("#presenter img").css("width", sm);
+          $("#presenter img").css("height", sm);
+          $("#presenter").css("width", sm);
+          $("#presenter").css("height", sm);
         }
         else if($(this).attr("value") == "md"){
-          $("#presenter img").css("width", "160px");
-          $("#presenter img").css("height", "160px");
-          $("#presenter").css("width", "160px");
-          $("#presenter").css("height", "160px");
+          $("#presenter img").css("width", md);
+          $("#presenter img").css("height", md);
+          $("#presenter").css("width", md);
+          $("#presenter").css("height", md);
         }
         else if($(this).attr("value") == "lr"){
-          $("#presenter img").css("width", "240px");
-          $("#presenter img").css("height", "240px");
-          $("#presenter").css("width", "240px");
-          $("#presenter").css("height", "240px");
+          $("#presenter img").css("width", lr);
+          $("#presenter img").css("height", lr);
+          $("#presenter").css("width", lr);
+          $("#presenter").css("height", lr);
         }
         setTimeout(positionPresenter,300);
         
