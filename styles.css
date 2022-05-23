@@ -10,19 +10,21 @@ body{
 	height: 829px;
 	position: absolute;
 	margin: 0 auto;
-	overflow: scroll;
 }
 
 #panel{
-	position: absolute;
+	position: fixed;
 	width: 300px;
-	height: 20px;
+	height: 100%;
 	top: 63px;
 	left: 1324px;
 }
 
 #panel-box{
 	margin: 20px;
+	height: 100%;
+	position: absolute;
+	overflow-y: auto;
 }
 
 #slide{
@@ -82,6 +84,7 @@ textarea{
 
 #presenters img{
 	width: 58px;
+	border-radius: 50%;
 }
 
 #text{
@@ -179,7 +182,7 @@ select{
 }
 
 .spacer{
-	height: 70px;
+	height: 150px;
 	float: left;
 	width: 100%;
 }
